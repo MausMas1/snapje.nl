@@ -508,6 +508,19 @@ section {
   padding: 28px;
 }
 
+.about-photo {
+  margin: 28px 0 0;
+}
+
+.about-photo img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+}
+
 .person-meta {
   display: grid;
   gap: 7px;
@@ -529,48 +542,22 @@ section {
   align-items: start;
 }
 
+.contact-wrap-single {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
+}
+
 .contact-card {
   padding: 30px;
   background: var(--yellow-100);
   border-color: rgba(243, 191, 49, .5);
 }
 
-.contact-form {
-  display: grid;
-  gap: 14px;
-  padding: 26px;
-}
-
-.form-row {
-  display: grid;
-  gap: 7px;
-}
-
-label {
-  color: var(--blue-900);
-  font-weight: 800;
-}
-
-input,
-textarea {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--white);
-  color: var(--ink);
-  font: inherit;
-  padding: 13px 15px;
-}
-
-textarea {
-  min-height: 136px;
-  resize: vertical;
-}
-
-.form-note {
-  margin: 0;
-  color: var(--muted);
-  font-size: .9rem;
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
 }
 
 .cta {
@@ -732,8 +719,7 @@ textarea {
     gap: 34px;
   }
 
-  .hero-actions .button,
-  .contact-form .button {
+  .hero-actions .button {
     width: 100%;
   }
 
@@ -751,10 +737,13 @@ textarea {
   .info-card,
   .step,
   .person-card,
-  .contact-form,
   .contact-card,
   .feature {
     padding: 22px;
+  }
+
+  .contact-actions .button {
+    width: 100%;
   }
 
   .cta-box {
