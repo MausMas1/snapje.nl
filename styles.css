@@ -553,38 +553,42 @@ section {
   border-color: rgba(243, 191, 49, .5);
 }
 
+.contact-merged {
+  padding: 42px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 90% 14%, rgba(255, 224, 113, .8), transparent 30%),
+    linear-gradient(135deg, var(--blue-900), #0d477d);
+  color: rgba(255, 255, 255, .86);
+  box-shadow: var(--shadow);
+}
+
+.contact-merged h2 {
+  color: var(--white);
+}
+
+.contact-merged p {
+  color: rgba(255, 255, 255, .86);
+}
+
+.contact-merged a:not(.button) {
+  color: var(--white);
+  font-weight: 800;
+}
+
+.contact-merged .eyebrow {
+  background: rgba(255, 240, 166, .92);
+}
+
+.contact-merged .button.secondary {
+  border-color: rgba(255, 255, 255, .45);
+}
+
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 22px;
-}
-
-.cta {
-  padding: 70px 0;
-}
-
-.cta-box {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 24px;
-  align-items: center;
-  padding: 40px;
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at 90% 10%, rgba(255, 240, 166, .9), transparent 28%),
-    var(--blue-900);
-  color: var(--white);
-  box-shadow: var(--shadow);
-}
-
-.cta-box h2 {
-  color: var(--white);
-}
-
-.cta-box p {
-  margin: 10px 0 0;
-  color: rgba(255, 255, 255, .82);
 }
 
 .site-footer {
@@ -656,9 +660,12 @@ section {
   .hero-grid,
   .split,
   .service-panel,
-  .contact-wrap,
-  .cta-box {
+  .contact-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .contact-merged {
+    padding: 32px;
   }
 
   .cards-3,
@@ -746,7 +753,7 @@ section {
     width: 100%;
   }
 
-  .cta-box {
-    padding: 28px;
+  .contact-merged {
+    padding: 24px;
   }
 }
