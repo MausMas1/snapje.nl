@@ -66,6 +66,18 @@ a {
   color: inherit;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :focus-visible {
   outline: 3px solid var(--yellow-500);
   outline-offset: 4px;
@@ -99,11 +111,19 @@ a {
 }
 
 .topline .container {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
-  padding: 8px 0;
+  padding: 8px 42px 8px 0;
+}
+
+.topline .container > span:last-child {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .topline a {
@@ -116,6 +136,31 @@ a {
 .topline a:hover,
 .topline a:focus-visible {
   text-decoration: underline;
+}
+
+.topline-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  min-height: 24px;
+  border-radius: 8px;
+}
+
+.topline-email svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .2s var(--ease-out);
+}
+
+.topline-email:hover svg,
+.topline-email:focus-visible svg {
+  transform: translateY(-1px);
 }
 
 .site-header {
@@ -628,6 +673,23 @@ main > section:not(.hero) {
   padding: 30px;
 }
 
+.person-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.person-photo {
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  border: 3px solid var(--white);
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center 32%;
+  box-shadow: 0 10px 24px rgba(1, 42, 99, .12);
+}
+
 .about-photo {
   margin: 32px 0 0;
 }
@@ -875,9 +937,6 @@ main > section:not(.hero) {
     border-radius: 12px;
   }
 
-  .nav .button {
-    display: none;
-  }
 }
 
 @media (max-width: 760px) {
@@ -959,10 +1018,6 @@ main > section:not(.hero) {
     justify-content: flex-start;
   }
 
-  .topline span:last-child {
-    flex-basis: 100%;
-  }
-
   .hero-note,
   .info-card,
   .person-card,
@@ -979,6 +1034,16 @@ main > section:not(.hero) {
   .pill-list li {
     padding: 7px 10px;
     font-size: .84rem;
+  }
+
+  .person-header {
+    gap: 15px;
+  }
+
+  .person-photo {
+    width: 78px;
+    height: 78px;
+    border-radius: 16px;
   }
 }
 
