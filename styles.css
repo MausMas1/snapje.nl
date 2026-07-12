@@ -106,6 +106,18 @@ a {
   padding: 8px 0;
 }
 
+.topline a {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.topline a:hover,
+.topline a:focus-visible {
+  text-decoration: underline;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -257,6 +269,16 @@ a {
     linear-gradient(135deg, #f8fbff 0%, #e3f0ff 100%);
 }
 
+main {
+  background:
+    radial-gradient(circle at 88% 8%, rgba(255, 224, 113, .24), transparent 25%),
+    radial-gradient(circle at 10% 30%, rgba(255, 224, 113, .18), transparent 25%),
+    radial-gradient(circle at 90% 52%, rgba(255, 224, 113, .2), transparent 25%),
+    radial-gradient(circle at 10% 74%, rgba(255, 224, 113, .18), transparent 25%),
+    radial-gradient(circle at 88% 96%, rgba(255, 224, 113, .22), transparent 25%),
+    linear-gradient(135deg, #fffdf7 0%, #f4f8fe 50%, #fffdf7 100%);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, .86fr);
@@ -309,6 +331,11 @@ h3 {
   margin: 20px 0 0;
   color: var(--muted);
   font-size: 1.16rem;
+}
+
+.sentence-break {
+  display: block;
+  margin-top: .45em;
 }
 
 .hero-actions {
@@ -371,12 +398,7 @@ section {
 
 main > section:not(.hero) {
   border-top: 1px solid rgba(216, 226, 238, .72);
-}
-
-#aanbod,
-#sensitherapie,
-#over-ons {
-  background: #f5f8fc;
+  background: transparent;
 }
 
 .section-head {
@@ -468,7 +490,7 @@ main > section:not(.hero) {
 }
 
 .band {
-  background: #f5f8fc;
+  background: transparent;
 }
 
 .split {
@@ -642,6 +664,10 @@ main > section:not(.hero) {
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: .96rem;
+}
+
+.address-lines {
+  line-height: 1.65;
 }
 
 .person-meta a {
@@ -855,6 +881,14 @@ main > section:not(.hero) {
 }
 
 @media (max-width: 760px) {
+
+  /* Op telefoons staat inhoud direct in beeld. Dit voorkomt dat snel scrollen
+     of mobiele browseroptimalisaties onderdelen tijdelijk onzichtbaar maken. */
+  .has-reveal .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 
   .hero {
     padding-top: 44px;
