@@ -1,0 +1,15 @@
+# Oude WordPress-pagina's behouden voor bezoekers en zoekmachines.
+/coaching /#coaching 301
+/coaching/ /#coaching 301
+/contact /#contact 301
+/contact/ /#contact 301
+/ervaringen /#over-ons 301
+/ervaringen/ /#over-ons 301
+/over-ons /#over-ons 301
+/over-ons/ /#over-ons 301
+/privacyreglement /privacy.html 301
+/privacyreglement/ /privacy.html 301
+/training /#sensitherapie 301
+/training/ /#sensitherapie 301
+/voor-scholen /#scholen 301
+/voor-scholen/ /#scholen 301
