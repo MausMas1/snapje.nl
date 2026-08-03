@@ -28,8 +28,12 @@ if (menuButton && navLinks) {
 
 // Eén generieke animatie-opzet houdt toekomstige inhoud automatisch consistent.
 const revealItems = document.querySelectorAll(
-  ".section-head, .card, .feature, .split-content, .split > img, .about-photo"
+  ".section-head, .card:not(.contact-merged), .feature, .split-content, .split > img, .about-photo"
 );
+
+document.querySelectorAll("[data-current-year]").forEach((year) => {
+  year.textContent = new Date().getFullYear();
+});
 
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   document.documentElement.classList.add("has-reveal");
