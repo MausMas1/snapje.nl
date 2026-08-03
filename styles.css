@@ -786,8 +786,7 @@ main > section:not(.hero) {
 }
 
 .contact-wrap-single {
-  grid-template-columns: minmax(0, 820px);
-  justify-content: center;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .contact-card {
