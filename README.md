@@ -19,4 +19,9 @@ Nieuwe kaarten kunnen dezelfde classes gebruiken als bestaande kaarten. De scrol
 
 ## Publiceren
 
-GitHub Pages publiceert de bestanden rechtstreeks uit deze repository. Commit en push wijzigingen naar de ingestelde Pages-branch om ze online te zetten.
+De website wordt gepubliceerd met Cloudflare Pages. Upload de volledige map `site-source/` als statische website, of koppel deze map aan een GitHub-repository.
+
+- `_redirects` houdt de oude WordPress-links werkend.
+- `robots.txt` en `sitemap.xml` zijn voor zoekmachines.
+- `_headers` voegt basisbeveiligingsheaders toe.
+- Zet Cloudflare Web Analytics aan in het Cloudflare-dashboard; Google Analytics is niet nodig.
